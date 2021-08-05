@@ -1,6 +1,6 @@
-package aJJBA;
+package JJBB;
 
-import aJJBA.model.*;
+import JJBB.model.*;
 
 
 public class ControllerImpl implements Controller {

@@ -1,7 +1,4 @@
-package aJJBA.model;
-
-import aJJBA.model.Enemy;
-import aJJBA.model.Stand;
+package JJBB.model;
 
 import java.util.ArrayList;
 

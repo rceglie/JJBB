@@ -1,6 +1,6 @@
-package aJJBA.view;
+package JJBB.view;
 
-import aJJBA.Main;
+import JJBB.Main;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;

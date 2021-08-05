@@ -1,6 +1,4 @@
-package aJJBA.model;
-
-import aJJBA.model.*;
+package JJBB.model;
 
 import java.util.ArrayList;
 

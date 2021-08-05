@@ -1,14 +1,14 @@
-package aJJBA.model;
+package JJBB.model;
 
 import java.util.ArrayList;
 
-public class Enemy {
+public class Player {
 
-    int resolve = 0;
+    int resolve = 10;
     int standsAlive = 1;
     ArrayList<Stand> stands = new ArrayList<Stand>();
 
-    public Enemy(Stand s){
+    public Player(Stand s){
         stands.add(s);
     } // Constructor
 
@@ -35,5 +35,8 @@ public class Enemy {
     Stand getStand(int s){
         return stands.get(s);
     }
+
+
+
 
 }

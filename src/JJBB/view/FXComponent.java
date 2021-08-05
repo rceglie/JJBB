@@ -1,4 +1,4 @@
-package aJJBA.view;
+package JJBB.view;
 
 import javafx.scene.Parent;
 

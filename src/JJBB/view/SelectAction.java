@@ -1,5 +1,5 @@
-package aJJBA.view;
-import aJJBA.model.*;
+package JJBB.view;
+import JJBB.model.*;
 import javafx.geometry.Pos;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;

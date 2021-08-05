@@ -1,10 +1,9 @@
-package aJJBA.view;
-import aJJBA.model.*;
+package JJBB.view;
+import JJBB.model.*;
 import javafx.geometry.Pos;
 import javafx.scene.Parent;
 import javafx.scene.control.Label;
 import javafx.scene.layout.FlowPane;
-import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 
 public class TopView implements FXComponent{

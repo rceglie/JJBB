@@ -1,7 +1,7 @@
-package aJJBA.view;
+package JJBB.view;
 
-import aJJBA.Main;
-import aJJBA.model.*;
+import JJBB.Main;
+import JJBB.model.*;
 import javafx.geometry.Pos;
 import javafx.scene.Parent;
 import javafx.scene.control.Label;
