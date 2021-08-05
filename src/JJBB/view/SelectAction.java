@@ -21,19 +21,18 @@ public class SelectAction implements FXComponent {
         FlowPane pane = new FlowPane();
         pane.setAlignment(Pos.CENTER);
 
-        VBox vbox = new VBox();
-        pane.getChildren().add(vbox);
+        VBox vboxbuttons = new VBox();
 
         Label label = new Label(m.getSStand().getName() + " Actions");
         label.setStyle("-fx-font: 24 arial;");
-        vbox.getChildren().add(label);
+        vboxbuttons.getChildren().add(label);
 
         Label f1 = new Label("");
         f1.setStyle("-fx-font: 24 arial;");
-        vbox.getChildren().add(f1);
+        vboxbuttons.getChildren().add(f1);
 
         HBox hbox = new HBox();
-        vbox.getChildren().add(hbox);
+        vboxbuttons.getChildren().add(hbox);
 
         int i = 0;
 
@@ -69,10 +68,10 @@ public class SelectAction implements FXComponent {
 
         Label f4 = new Label(" ");
         f4.setStyle("-fx-font: 50 arial;");
-        vbox.getChildren().add(f4);
+        vboxbuttons.getChildren().add(f4);
 
         HBox secondRow = new HBox();
-        vbox.getChildren().add(secondRow);
+        vboxbuttons.getChildren().add(secondRow);
 
         Button btn3 = new Button();
         btn3.setText(m.getSStand().getA3Cost() + "\n" + m.getSStand().getA3Name());
@@ -102,12 +101,42 @@ public class SelectAction implements FXComponent {
                     AppLauncher.refresh();
                 });
 
-        Label f5 = new Label(" ");
-        f5.setStyle("-fx-font: 75 arial;");
-        vbox.getChildren().add(f5);
+        Label f5 = new Label(" ");  // Bottom filler
+        f5.setStyle("-fx-font: 50 arial;");
+        vboxbuttons.getChildren().add(f5);
 
-        vbox.setAlignment(Pos.CENTER);
+        vboxbuttons.setAlignment(Pos.CENTER);
 
+        HBox sections = new HBox();
+
+        // Picture of stand
+
+        Label standPic = new Label("stand pic");
+        VBox storePic = new VBox(standPic);
+        storePic.setAlignment(Pos.CENTER);
+        HBox temp1 = new HBox(storePic);
+        temp1.setMinWidth(250);
+        temp1.setMaxWidth(250);
+        temp1.setAlignment(Pos.CENTER);
+        sections.getChildren().add(temp1);
+
+        sections.getChildren().add(vboxbuttons);
+
+        // Resolve Amount
+
+        Label resolveLabel = new Label("CURRENT\nRESOLVE");
+        resolveLabel.setStyle("-fx-font: 26 arial;");
+        Label resolveAmount = new Label(m.getPlayer().getResolve() +"\n ");
+        resolveAmount.setStyle("-fx-font: 30 arial;");
+        VBox storeResolve = new VBox(resolveAmount, resolveLabel);
+        storeResolve.setAlignment(Pos.CENTER);
+        HBox temp2 = new HBox(storeResolve);
+        temp2.setMinWidth(250);
+        temp2.setMaxWidth(250);
+        temp2.setAlignment(Pos.CENTER);
+        sections.getChildren().add(temp2);
+
+        pane.getChildren().add(sections);
         return pane;
     }
 }

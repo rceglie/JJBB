@@ -16,13 +16,14 @@ public class AppLauncher extends Application {
         stage.setTitle("JJBA");
 
         pane = new BorderPane();
+        pane.setStyle("-fx-border-color: black; -fx-border-width: 3px;");
 
         pane.setTop(tv.render());
         pane.setBottom(bv.render());
 
         // Scene setting
 
-        Scene scene = new Scene(pane, 900, 750);
+        Scene scene = new Scene(pane, 1000, 900); // width, height
         //scene.getStylesheets().add("style/main.css");
         stage.setScene(scene);
 

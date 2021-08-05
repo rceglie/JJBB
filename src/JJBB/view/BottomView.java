@@ -23,8 +23,6 @@ public class BottomView implements FXComponent {
 
         VBox v1 = new VBox();
         pane.getChildren().add(v1);
-        Label resolve = new Label(m.getPlayer().getResolve() + "");
-        v1.getChildren().add(resolve);
 
         if (m.getGameStatus() == 0){
             SelectStand ss = new SelectStand(Main.getModel());
@@ -39,6 +37,9 @@ public class BottomView implements FXComponent {
             GameOver go = new GameOver(Main.getModel());
             v1.getChildren().add(go.render());
         }
+
+        pane.setStyle("-fx-border-color: black; -fx-border-width: 10px;");
+        pane.setMinHeight(400);
 
         return pane;
     }
